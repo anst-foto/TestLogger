@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Logger</name>
+    </assembly>
+    <members>
+        <member name="T:Logger.ConsoleLogger">
+            <summary>
+            Логгер в консоль
+            </summary>
+        </member>
+        <member name="M:Logger.ConsoleLogger.WriteLog(System.String,System.String,System.ConsoleColor)">
+            <summary>
+            Запись в консоль
+            </summary>
+            <param name="type">Тип сообщения</param>
+            <param name="message">Текст сообщения</param>
+            <param name="color">Цвет сообщения</param>
+        </member>
+        <member name="M:Logger.ConsoleLogger.LogInfo(System.String)">
+            <summary>
+            Логирование информации
+            </summary>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="M:Logger.ConsoleLogger.LogError(System.String)">
+            <summary>
+            Логирование ошибки
+            </summary>
+            <param name="message">Текст ошибки</param>
+        </member>
+        <member name="M:Logger.ConsoleLogger.Log(System.String,System.String)">
+            <summary>
+            Логирование
+            </summary>
+            <param name="type">Тип сообщения</param>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="T:Logger.FileLogger">
+            <summary>
+            Логгер в файл
+            </summary>
+        </member>
+        <member name="F:Logger.FileLogger._filePath">
+            <summary>
+            Путь к файлу
+            </summary>
+        </member>
+        <member name="M:Logger.FileLogger.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="filePath">Путь к файлу</param>
+            <exception cref="T:System.ArgumentNullException">Ошибка пустой строки пути к файлу</exception>
+        </member>
+        <member name="M:Logger.FileLogger.WriteToFile(System.String,System.String)">
+            <summary>
+            Запись в файл
+            </summary>
+            <param name="type">Тип сообщения</param>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="M:Logger.FileLogger.LogInfo(System.String)">
+            <summary>
+            Логирование информации
+            </summary>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="M:Logger.FileLogger.LogError(System.String)">
+            <summary>
+            Логирование ошибки
+            </summary>
+            <param name="message">Текст ошибки</param>
+        </member>
+        <member name="M:Logger.FileLogger.Log(System.String,System.String)">
+            <summary>
+            Логирование
+            </summary>
+            <param name="type">Тип сообщения</param>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="T:Logger.ILogger">
+            <summary>
+            Интерфейс логгера
+            </summary>
+        </member>
+        <member name="M:Logger.ILogger.LogInfo(System.String)">
+            <summary>
+            Логгирование информации
+            </summary>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="M:Logger.ILogger.LogError(System.String)">
+            <summary>
+            Логгирование ошибки
+            </summary>
+            <param name="message">Текст ошибки</param>
+        </member>
+        <member name="M:Logger.ILogger.Log(System.String,System.String)">
+            <summary>
+            Логгирование
+            </summary>
+            <param name="type">Тип сообщения</param>
+            <param name="message">Текст сообщения</param>
+        </member>
+    </members>
+</doc>
