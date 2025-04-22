@@ -5,9 +5,9 @@ namespace TestLogger;
 
 public class Calc
 {
-    private readonly ILogger _logger;
+    private readonly ILogger? _logger;
 
-    public Calc(ILogger logger)
+    public Calc(ILogger? logger = null)
     {
         _logger = logger;
     }
@@ -15,21 +15,21 @@ public class Calc
     public double Add(double a, double b)
     {
         var result = a + b;
-        _logger.LogInfo($"{a} + {b} = {result}");
+        _logger?.LogInfo($"{a} + {b} = {result}");
         return result;
     }
 
     public double Sub(double a, double b)
     {
         var result = a - b;
-        _logger.LogInfo($"{a} - {b} = {result}");
+        _logger?.LogInfo($"{a} - {b} = {result}");
         return result;
     }
     
     public double Mul(double a, double b)
     {
         var result = a * b;
-        _logger.LogInfo($"{a} * {b} = {result}");
+        _logger?.LogInfo($"{a} * {b} = {result}");
         return result;
     }
     
@@ -37,12 +37,12 @@ public class Calc
     {
         if (b == 0)
         {
-            _logger.LogError("Деление на ноль!");
+            _logger?.LogError("Деление на ноль!");
             throw new DivideByZeroException();
         }
         
         var result = a / b;
-        _logger.LogInfo($"{a} / {b} = {result}");
+        _logger?.LogInfo($"{a} / {b} = {result}");
         return result;
     }
 }
